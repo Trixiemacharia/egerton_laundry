@@ -8,14 +8,21 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-       <div id="welcome-screen">
+    <!--welcome section-->
+    <div id="welcome-screen">
         <h1>Welcome to Egerton Laundry System</h1>
-       </div>
+        <div class="welcome-screen">
+        <button id="empLogin">Employee login</button>
+        <button id="dashboardBtn">Customer Dashboard</button>
+    </div>
+    </div>
+
+    <!--login section-->
         <div class="login">
             <form action="">
             <h1>Login</h1>
             <div class="input-box">
-                <label for="username or email">Username or email:</label>
+                <label for="username">Username</label>
                 <input type="text" id="username or email" name="username or email" required>
                 <i class='bx bxs-user'></i>
             </div>
@@ -40,21 +47,3 @@
 
 
     <script src="script.js"></script> <!-- Link to JavaScript file -->
-       <!--dashboard section-->
-    <div id="dashboard" style="display: none;">
-    <nav class="navbar">
-        <h1>Our Services</h1>
-        <button class="logout-btn">Logout</button>
-    </nav>
-
-    <div class="services">
-        <img src="images/wash-icon.png">
-        <h2>Wash & fold</h2>
-        <p>We wash,dry and fold your clothes with care</p>
-        <button>Learn more</button>
-    </div>
-    <footer>
-        <p>&copy; 2025 Laundry management System.All rights reserved.</p>
-    </footer>
-</body>
-</html>

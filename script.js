@@ -1,8 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Select elements for the welcome screen and login form
+    const welcomeScreen = document.getElementById("welcome-screen");
+    const loginForm = document.querySelector(".login");
+
+    // Hide login form initially
+    if (loginForm) {
+        loginForm.style.display = "none";
+    }
+
+    // Show login form after 5 seconds
+    setTimeout(() => {
+        if (welcomeScreen) {
+            welcomeScreen.style.display = "none"; // Hide welcome screen
+        }
+        if (loginForm) {
+            loginForm.style.display = "block"; // Show login form
+        }
+    }, 3000); // 5000ms = 5 seconds
+
     // Select login and order buttons safely
     const loginBtn = document.querySelector(".login form button");
     const orderBtn = document.querySelector(".order form button");
+    const employeeBtn = document.getElementById("empLogin");
+    const dashboardBtn = document.getElementById("dashboardBtn");
 
+    if (employeeBtn) {
+        employeeBtn.addEventListener("click", function () {
+            window.location.href = "login.html";
+        });
+    }
+    if(dashboardBtn){
+        dashboardBtn.addEventListener("click", function () {
+            window.location.href = "dashboard.html";
+        })
+    }
     // Validate username/email format
     const usernameInput = document.getElementById("username") || document.getElementById("username-or-email");
     if (usernameInput) {
@@ -29,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Your password must have at least 8 characters, including uppercase, lowercase, numbers, and special characters.");
                 event.preventDefault();
             } else {
-                window.location.href = "main.html";
+                window.location.href = "dashboard.html";
             }
         });
     }
@@ -71,17 +102,5 @@ document.addEventListener("DOMContentLoaded", function () {
             // If validations pass, allow form submission
             alert("Order placed successfully!");
         });
-    }
-
-    setTimeout(function() {
-        const welcomeScreen = document.getElementById('welcome-screen');
-        const mainContent = document.getElementById('main-content');
-
-        // Fade out the welcome screen
-        welcomeScreen.style.opacity = '0';
-        setTimeout(() => {
-            welcomeScreen.style.display = 'none'; // Hide after fade
-            mainContent.style.display = 'block';  // Show main content
-        }, 1000); // Match the fade duration
-    }, 3000); 
+    } 
 });

@@ -8,11 +8,16 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: teal;
+}
+
+.login{
+    display:none;
 }
 
 .login .input-box{
@@ -41,12 +46,18 @@ body {
     justify-content:space-between;
     font-size:14.5px;
     margin:-15px 0 15px;
+    gap: 10px;
+}
+
+.remember-me label{
+    display:flex;
+    align-items: center;
+    gap:5px;
 }
 
 .remember-me a{
-    display: flex;
-    align-items:centre;
-    gap:5px;
+    margin-left:auto;
+    text-decoration: none;
 }
 .remember-me a:hover{
     text-decoration: underline;
@@ -111,6 +122,65 @@ button:hover {
     color: red;
     font-size: 14px;
     margin-top: 10px;
+}
+
+.navbar{
+    background-color: bisque;
+    color:white;
+    padding: 15px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.logout-btn{
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+
+.logout-btn:hover {
+    background-color: #0056b3;
+    color: turquoise;
+}
+
+.service {
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+}
+
+.service img {
+    width: 50px;
+    height: 50px;
+}
+
+.service button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.service button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color:paleturquoise;
+    color: white;
 }
 /* Welcome screen: full page and visible by default */
 #welcome-screen {
