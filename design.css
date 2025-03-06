@@ -16,9 +16,7 @@ body {
     background: teal;
 }
 
-.login{
-    display:none;
-}
+
 
 .login .input-box{
     position:relative;

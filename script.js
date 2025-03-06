@@ -1,23 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Select elements for the welcome screen and login form
-    const welcomeScreen = document.getElementById("welcome-screen");
-    const loginForm = document.querySelector(".login");
-
-    // Hide login form initially
-    if (loginForm) {
-        loginForm.style.display = "none";
-    }
-
-    // Show login form after 5 seconds
-    setTimeout(() => {
-        if (welcomeScreen) {
-            welcomeScreen.style.display = "none"; // Hide welcome screen
-        }
-        if (loginForm) {
-            loginForm.style.display = "block"; // Show login form
-        }
-    }, 3000); // 5000ms = 5 seconds
-
     // Select login and order buttons safely
     const loginBtn = document.querySelector(".login form button");
     const orderBtn = document.querySelector(".order form button");
@@ -31,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     if(dashboardBtn){
         dashboardBtn.addEventListener("click", function () {
-            window.location.href = "dashboard.html";
+            window.location.href = "customer_dashboard.html";
         })
     }
     // Validate username/email format
