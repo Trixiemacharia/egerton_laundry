@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAUNDRY MANAGEMENT SYSTEM</title>
-    <link rel="stylesheet" href="design.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
   </head>
   <body>
         <!--dashboard section-->
+        <h1>WELCOME:</h1>
         <div id="dashboard">
-          <nav class="navbar">
-              <h1>Our Services</h1>
-              <button class="logout-btn">Logout</button>
-          </nav>
-          </div>
+              <h2>Our Services</h2>
+              </div>
           <div class="Services">
-            <form id="sevice-form">
+            <form action="saverecord" method="post">
+              <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+                
+                <label for="service">Service Type:</label>
+              <select id="service" name="service">
+                <option value="wash">Wash</option>
+                <option value="iron">Iron</option>
+                <option value="dryclean">Dry Cleaning</option>
+            </select>
+
               <label>Choose the item of clothing:</label>
     <input type="checkbox" id="duvet(5*6)" name="items" value="duvet(5*6)" data-price="250">
     <label for="duvet(5*6)">duvet(5*6) - Ksh 250</label><br>
