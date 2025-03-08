@@ -4,13 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAUNDRY MANAGEMENT SYSTEM</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel ="stylesheet" href="design.css">
   </head>
   <body>
         <!--dashboard section-->
-        <h1>WELCOME:</h1>
-        <div id="dashboard">
+        <div class="container">
+          <!--Side bar-->
+          <aside class="sidebar">
+            <div class="top">
+              <div class="logo">
               <h2>Our Services</h2>
+              <div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
               </div>
+              <nav>
+                <ul>
+                    <li>
+                      <a href="#">
+                      <span class="material-symbols-outlined">home</span>Home
+                    </a>
+                  </li>
+                    <li>
+                      <a href="#">
+                      <span class="material-symbols-outlined">analytics</span>Analytics
+                    </a>
+                  </li>
+                    <li>
+                      <a href="#">
+                      <span class="material-symbols-outlined">settings</span>Settings
+                    </a>
+                  </li>
+                    <li>
+                      <a href="#">
+                      <span class="material-symbols-outlined">laundry</span>Laundry Services
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                    <span class="material-symbols-outlined">share_reviews</span>Reviews
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                  <span class="material-symbols-outlined">logout</span>Logout
+                </a>
+              </li>
+                </div>
+                </div>  
+                 </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+          <header>
+              <h1>Welcome</h1>
+              <button id="theme-toggle">Toggle Theme</button>
+          </header>
+
           <div class="Services">
             <form action="saverecord" method="post">
               <label for="customer-name">Customer Name:</label>
