@@ -17,6 +17,635 @@ body {
 }
 
 
+/*login page*/
+.login .input-box{
+    position:relative;
+    width:100%;
+    height:100px;
+    margin:10px;
+
+}
+
+.input-box input{
+    background:transparent;
+    border:2px solid beige;
+    border-radius: 40px;
+}
+
+.input-box i{
+    position:absolute;
+    right:20px;
+    top:50%;
+    font-size:15px;
+}
+
+.login .remember-me{
+    display:flex;
+    justify-content:space-between;
+    font-size:14.5px;
+    margin:-15px 0 15px;
+    gap: 10px;
+}
+
+.remember-me label{
+    display:flex;
+    align-items: center;
+    gap:5px;
+}
+
+.remember-me a{
+    margin-left:auto;
+    text-decoration: none;
+}
+.remember-me a:hover{
+    text-decoration: underline;
+}
+
+
+h1 {
+    color: blueviolet;
+    font-size: 24px;
+}
+
+p {
+    font-size: 14px;
+    color: gray;
+}
+
+.input-group {
+    margin: 15px 0;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border-color: #2b5876;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2b5876;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: turquoise;
+}
+
+.signup-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-text a {
+    color: #2b5876;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.navbar{
+    background-color: bisque;
+    color:white;
+    padding: 15px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.logout-btn{
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+
+.logout-btn:hover {
+    background-color: #0056b3;
+    color: turquoise;
+}
+
+.service {
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+}
+
+.service img {
+    width: 50px;
+    height: 50px;
+}
+
+.service button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.service button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color:paleturquoise;
+    color: white;
+}
+/* Welcome screen: full page and visible by default */
+#welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    z-index: 9999; /* Makes sure it's on top of everything */
+    transition: opacity 1s ease; /* For fade-out effect */
+}
+#welcome-screen h1{
+    font-size: 60px;
+    color: black;
+}
+/* Main content hidden initially */
+#main-content {
+    display: none; /* Hidden by default */
+    text-align: center;
+    padding-top: 50px;
+}
+You said:
+i need to create a responsive dashboard using html and css with light and dark mode
+ChatGPT said:
+
+Here’s a basic responsive dashboard using HTML and CSS, with a light and dark mode toggle using JavaScript.
+
+I'll create the project structure for you first:
+
+📁 dashboard-project
+├── 📄 index.html
+├── 📄 style.css
+├── 📄 script.js
+
+Now, I'll provide the code.
+
+Now, let's add CSS (style.css) and JavaScript (script.js) to handle responsiveness and theme toggling. Would you like me to generate them as well?
+You said:
+yes
+ChatGPT said:
+
+I've added CSS for responsiveness and JavaScript for the dark mode toggle directly within your HTML file. If you prefer separate files for style.css and script.js, let me know, and I'll adjust it accordingly! 🚀
+You said:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAUNDRY MANAGEMENT SYSTEM</title>
+  </head>
+  <body>
+        <!--dashboard section-->
+        <h1>WELCOME:</h1>
+        <div id="dashboard">
+              <h2>Our Services</h2>
+              </div>
+          <div class="Services">
+            <form action="saverecord" method="post">
+              <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+                
+                <label for="service">Service Type:</label>
+              <select id="service" name="service">
+                <option value="wash">Wash</option>
+                <option value="iron">Iron</option>
+                <option value="dryclean">Dry Cleaning</option>
+            </select>
+
+              <label>Choose the item of clothing:</label>
+    <input type="checkbox" id="duvet(5*6)" name="items" value="duvet(5*6)" data-price="250">
+    <label for="duvet(5*6)">duvet(5*6) - Ksh 250</label><br>
+
+    <input type="checkbox" id="duvet(6*6)" name="items" value="duvet(6*6)" data-price="250">
+    <label for="duvet(6*6)">duvet(6*6) - Ksh 250</label><br>
+
+    <input type="checkbox" id="duvet(4*6)" name="items" value="duvet(4*6)" data-price="200">
+    <label for="duvet(4*6)">Jeans - Ksh 200</label><br>
+    
+    <input type="checkbox" id="assorted_clothes(bucket)" name="items" value="assorted clothes(bucket)" data-price="250">
+    <label for="assorted_clothes(bucket)">assorted clothes(bucket) - Ksh 250</label><br>
+
+    <input type="checkbox" id="clothes-laundry_basket" name="items" value="clothes-laundry basket" data-price="350">
+    <label for="clothes-laundry_basket">clothes-laundry basket - Ksh 350</label><br>
+
+    <input type="checkbox" id="sport_shoes/rubbers" name="items" value="sport shoes/rubbers" data-price="100">
+    <label for="sport_shoes/rubbers">sport shoes/rubbers - Ksh 100</label><br>
+
+    <input type="checkbox" id="pillow" name="items" value="pillow" data-price="100">
+    <label for="pillow">pillow - Ksh 100</label><br>
+
+    <input type="checkbox" id="bed_cover" name="items" value="bed cover" data-price="150">
+    <label for="bed_cover">bed cover - Ksh 150</label><br>
+    
+    <input type="checkbox" id="bed_sheets" name="items" value="bed sheets" data-price="40">
+    <label for="bed_sheets">bed sheets - Ksh 40</label><br>
+
+    <input type="checkbox" id="jacket" name="items" value="jacket" data-price="100">
+    <label for="jacket">jacket - Ksh 100</label><br>
+
+    <input type="checkbox" id="lab_coat/trench_coat" name="items" value="lab coat/trench coat" data-price="100">
+    <label for="lab_coat/trench_coat">lab coat/trench coat - Ksh 100</label><br>
+    
+    <button type="submit">Submit Order</button>
+            </form>
+            
+          </div>
+              <footer>
+                  <p>&copy; 2025 Laundry management System.All rights reserved.</p>
+              </footer>
+              <script src="script.js"></script> <!-- Link to JavaScript file -->
+  </body>
+</html>
+ChatGPT said:
+
+It looks like you want to integrate your Laundry Management System UI into your existing Responsive Dashboard. Do you want me to merge both or create a separate page for the laundry system while keeping the dashboard?
+You said:
+merge both then create a separate html and css file
+ChatGPT said:
+
+Now that your HTML structure is merged, I'll provide a responsive CSS file (style.css) and a JavaScript file (script.js) for theme toggling and responsiveness.
+📄 style.css
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.dark-mode header {
+    background: #444;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#theme-toggle:hover {
+    background: #0056b3;
+}
+
+/* Form Styling */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode form {
+    background: #444;
+}
+
+/* Input Fields */
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .sidebar nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sidebar nav ul li {
+        margin: 0 10px;
+    }
+}
+
+📄 script.js
+
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    // Check for saved theme preference
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+    }
+
+    themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        // Save theme preference
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    });
+});
+
+Features Implemented ✅
+
+✅ Responsive Layout (Sidebar & Content)
+✅ Light & Dark Mode Toggle (With Local Storage)
+✅ Stylish Form for Laundry Services
+✅ Mobile-Friendly Navigation
+
+Now, you just need to save these files as style.css and script.js inside the same directory as your HTML file. Let me know if you need any modifications! 🚀
+2/2
+You said:
+where is the html file?
+ChatGPT said:
+
+Your HTML file (index.html) is already provided in your canvas. However, I'll format it again for clarity and ensure it works well with the CSS and JavaScript files.
+📄 index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Laundry Services</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>Welcome</h1>
+                <button id="theme-toggle">Toggle Theme</button>
+            </header>
+
+            <section class="content">
+                <h2>Our Services</h2>
+                <form action="saverecord" method="post">
+                    <label for="customer-name">Customer Name:</label>
+                    <input type="text" id="customer-name" name="customer-name" required>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone" required>
+                    
+                    <label for="service">Service Type:</label>
+                    <select id="service" name="service">
+                        <option value="wash">Wash</option>
+                        <option value="iron">Iron</option>
+                        <option value="dryclean">Dry Cleaning</option>
+                    </select>
+
+                    <label>Choose the item of clothing:</label><br>
+                    <input type="checkbox" id="duvet_5x6" name="items" value="duvet(5*6)" data-price="250">
+                    <label for="duvet_5x6">Duvet (5*6) - Ksh 250</label><br>
+                    
+                    <input type="checkbox" id="duvet_6x6" name="items" value="duvet(6*6)" data-price="250">
+                    <label for="duvet_6x6">Duvet (6*6) - Ksh 250</label><br>
+                    
+                    <input type="checkbox" id="duvet_4x6" name="items" value="duvet(4*6)" data-price="200">
+                    <label for="duvet_4x6">Duvet (4*6) - Ksh 200</label><br>
+                    
+                    <input type="checkbox" id="assorted_clothes" name="items" value="assorted clothes(bucket)" data-price="250">
+                    <label for="assorted_clothes">Assorted Clothes (Bucket) - Ksh 250</label><br>
+                    
+                    <input type="checkbox" id="laundry_basket" name="items" value="clothes-laundry basket" data-price="350">
+                    <label for="laundry_basket">Clothes Laundry Basket - Ksh 350</label><br>
+                    
+                    <input type="checkbox" id="sport_shoes" name="items" value="sport shoes/rubbers" data-price="100">
+                    <label for="sport_shoes">Sport Shoes/Rubbers - Ksh 100</label><br>
+                    
+                    <input type="checkbox" id="pillow" name="items" value="pillow" data-price="100">
+                    <label for="pillow">Pillow - Ksh 100</label><br>
+                    
+                    <input type="checkbox" id="bed_cover" name="items" value="bed cover" data-price="150">
+                    <label for="bed_cover">Bed Cover - Ksh 150</label><br>
+                    
+                    <input type="checkbox" id="bed_sheets" name="items" value="bed sheets" data-price="40">
+                    <label for="bed_sheets">Bed Sheets - Ksh 40</label><br>
+                    
+                    <input type="checkbox" id="jacket" name="items" value="jacket" data-price="100">
+                    <label for="jacket">Jacket - Ksh 100</label><br>
+                    
+                    <input type="checkbox" id="lab_coat" name="items" value="lab coat/trench coat" data-price="100">
+                    <label for="lab_coat">Lab Coat/Trench Coat - Ksh 100</label><br>
+                    
+                    <button type="submit">Submit Order</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Laundry Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+🛠 Setup Instructions
+
+    Create a folder for your project.
+    Inside the folder, create three files:
+        index.html
+        style.css
+        script.js
+    Copy and paste the HTML code above into index.html.
+    Copy and paste the CSS (from my previous response) into style.css.
+    Copy and paste the JavaScript (from my previous response) into script.js.
+    Open index.html in your browser, and your responsive dashboard with light/dark mode will be ready!
+
+🚀 Features Included:
+
+✅ Responsive Sidebar & Layout
+✅ Dark Mode Toggle (Saves preference in localStorage)
+✅ Styled Laundry Services Form
+✅ Mobile-Friendly Navigation
+
+Let me know if you need any improvements! 😃🔥
+You said:
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: teal;
+}
+
+
 
 .login .input-box{
     position:relative;
@@ -204,4 +833,308 @@ footer {
     display: none; /* Hidden by default */
     text-align: center;
     padding-top: 50px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: teal;
+    flex-direction: column;
+}
+
+/*Login Form */
+.login {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login .input-box {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+}
+
+.input-box input {
+    background: transparent;
+    border: 2px solid beige;
+    border-radius: 40px;
+    padding: 10px;
+    width: 100%;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    font-size: 15px;
+}
+
+.login .remember-me {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+    gap: 10px;
+}
+
+.remember-me label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.remember-me a {
+    margin-left: auto;
+    text-decoration: none;
+}
+
+.remember-me a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2b5876;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: turquoise;
+}
+
+/*Dashboard*/
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: bisque;
+    padding: 20px;
+    height: 100%;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+    display:flex;
+    align-items: center;
+    gap: 10px; /*gap btwn icon &text*/
+    padding:10px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.material-symbols-outlined{
+    font-size: 24px; /*icon size*/
+    color: black;
+}
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#theme-toggle {
+    background: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#theme-toggle:hover {
+    background: #0056b3;
+}
+
+/* Laundry Services Form */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="checkbox"] {
+    width: auto;
+}
+
+/* Service Boxes */
+.service {
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+}
+
+.service img {
+    width: 50px;
+    height: 50px;
+}
+
+.service button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.service button:hover {
+    background-color: #0056b3;
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+
+.logout-btn:hover {
+    background-color: #0056b3;
+    color: turquoise;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: paleturquoise;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+/* Welcome Screen */
+#welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    z-index: 9999;
+    transition: opacity 1s ease;
+}
+
+#welcome-screen h1 {
+    font-size: 60px;
+    color: black;
+}
+
+/* Main Content Hidden Initially */
+#main-content {
+    display: none;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/*Dark Mode*/
+body.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .sidebar {
+    background: #333;
+}
+
+.dark-mode .sidebar nav ul li a {
+    color: white;
+}
+
+.dark-mode .main-content {
+    background: #222;
+}
+
+.dark-mode form {
+    background: #333;
+    color: white;
+}
+
+.dark-mode input, .dark-mode select {
+    background: #444;
+    color: white;
+    border: 1px solid #666;
+}
+
+.dark-mode button {
+    background: #0056b3;
+}
+
+.dark-mode footer {
+    background-color: #222;
 }
