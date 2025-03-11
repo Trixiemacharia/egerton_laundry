@@ -3,15 +3,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginBtn = document.querySelector(".login form button");
     const orderBtn = document.querySelector(".order form button");
     const employeeBtn = document.getElementById("empLogin");
+    const customerBtn = document.getElementById("customerLogin");
     const dashboardBtn = document.getElementById("dashboardBtn");
 
+    /*employee login redirects to employee login page*/
     if (employeeBtn) {
         employeeBtn.addEventListener("click", function () {
             window.location.href = "login.html";
         });
     }
+    /*customer login redirects to customer login page*/
+    if(customerBtn){
+        customerBtn.addEventListener("click", function () {
+            window.location.href = "customer_login.html";
+        })
+    }
+    //dashboard button redirects to customer's dashboard
     if(dashboardBtn){
-        dashboardBtn.addEventListener("click", function () {
+        dashboardBtn.addEventListener("click", function(){
             window.location.href = "customer_dashboard.html";
         })
     }
@@ -34,18 +43,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (loginBtn) {
         loginBtn.addEventListener("click", function (event) {
+            event.preventDefault(); //prevents default form submission
+
+            const username = document.getElementById("username").value.trim();
             const passwordInput = document.getElementById("password");
-            if (!passwordInput) return;
+
+            if (!username || !passwordInput) {
+                alert("Please enter both username and password.");
+                return;
+            }
+
+            const password = passwordInput.value.trim();
 
             if (!isPasswordValid(passwordInput.value)) {
                 alert("Your password must have at least 8 characters, including uppercase, lowercase, numbers, and special characters.");
-                event.preventDefault();
-            } else {
-                window.location.href = "dashboard.html";
+                return;
             }
-        });
-    }
 
+ // Check if the login is for an employee or customer
+ if (username.includes("admin")) {
+    alert("Welcome Admin!");
+    sessionStorage.setItem("userType", "admin"); // Store session info
+    window.location.href = "admin_dashboard.html"; // Redirect to admin dashboard
+} else {
+    alert("Welcome Customer!");
+    sessionStorage.setItem("userType", "customer"); // Store session info
+    window.location.href = "customer_dashboard.html"; // Redirect to customer dashboard
+}
+});
     // Prevent non-numeric characters in phone number
     const phoneInput = document.getElementById("phone");
     if (phoneInput) {
@@ -84,4 +109,12 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Order placed successfully!");
         });
     } 
-});
+
+    //restrict dashboard access if not loggen in
+    if (window.location.pathname.includes("customer_dashboard.html")) {
+        const userType = sessionStorage.getItem("userType");
+        if (userType !== "customer") {
+            alert("Access denied! Please log in as a customer.");
+            window.location.href = "customer_login.html"; // Redirect to login
+        }
+    }

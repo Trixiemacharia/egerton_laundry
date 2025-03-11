@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAUNDRY MANAGEMENT SYSTEM</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel ="stylesheet" href="design.css">
+  </head>
+  <body>
+        <!--dashboard section-->
+        <div class="container">
+          <!--Side bar-->
+          <aside>
+            <div class="top">
+              <div class="logo">
+              <h2>Our Services</h2>
+              <div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+              </div>
+              <div class="sidebar">
+                      <a href="#">
+                      <span class="material-symbols-outlined">home</span>
+                      <h3>Home</h3>
+                    </a>
+                    <a href="#">
+                      <span class="material-symbols-outlined">settings</span>
+                      <h3>Settings</h3>
+                    </a>
+                    <a href="#">
+                      <span class="material-symbols-outlined">laundry</span>
+                      <h3>Laundry</h3>
+                    </a>
+                    <a href="#">
+                      <span class="material-symbols-outlined">share_reviews</span>
+                      <h3>Share_reviews</h3>
+                    </a>
+                    <a href="#">
+                      <span class="material-symbols-outlined">logout</span>
+                      <h3>Logout</h3>
+                    </a>
+                    </div>
+        </aside>
+        <main class="main-content">
+          <header>
+              <h1>Welcome</h1>
+          <div class="left-section">
+          <div class="theme-toggler">
+            <span class="material-symbols-outlined">light_mode</span>
+            <span class="material-symbols-outlined">dark_mode</span>
+          </div>
+
+          <div class="profile">
+            <div class="info">
+              <p>Hey, <b>Stacy</b></p>
+            </div>
+            <div class="profile-photo">
+              <span class="material-symbols-outlined">account_circle</span>
+            </div>
+          </div>
+          </div>
+          </header>
+          <!--menu button-->
+          <div class="right">
+            <div class="top">
+              <button id="menu-btn">
+                <span class="material-symbols-outlined">menu</span>
+              </button>
+            </div>
+          </div>
+          <div class="Services">
+            <form action="saverecord" method="post">
+              <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+                
+                <label for="service">Service Type:</label>
+              <select id="service" name="service">
+                <option value="wash">Wash</option>
+                <option value="iron">Iron</option>
+                <option value="dryclean">Dry Cleaning</option>
+            </select>
+
+              <label>Choose the item of clothing:</label>
+    <input type="checkbox" id="duvet(5*6)" name="items" value="duvet(5*6)" data-price="250">
+    <label for="duvet(5*6)">duvet(5*6) - Ksh 250</label><br>
+
+    <input type="checkbox" id="duvet(6*6)" name="items" value="duvet(6*6)" data-price="250">
+    <label for="duvet(6*6)">duvet(6*6) - Ksh 250</label><br>
+
+    <input type="checkbox" id="duvet(4*6)" name="items" value="duvet(4*6)" data-price="200">
+    <label for="duvet(4*6)">Jeans - Ksh 200</label><br>
+    
+    <input type="checkbox" id="assorted_clothes(bucket)" name="items" value="assorted clothes(bucket)" data-price="250">
+    <label for="assorted_clothes(bucket)">assorted clothes(bucket) - Ksh 250</label><br>
+
+    <input type="checkbox" id="clothes-laundry_basket" name="items" value="clothes-laundry basket" data-price="350">
+    <label for="clothes-laundry_basket">clothes-laundry basket - Ksh 350</label><br>
+
+    <input type="checkbox" id="sport_shoes/rubbers" name="items" value="sport shoes/rubbers" data-price="100">
+    <label for="sport_shoes/rubbers">sport shoes/rubbers - Ksh 100</label><br>
+
+    <input type="checkbox" id="pillow" name="items" value="pillow" data-price="100">
+    <label for="pillow">pillow - Ksh 100</label><br>
+
+    <input type="checkbox" id="bed_cover" name="items" value="bed cover" data-price="150">
+    <label for="bed_cover">bed cover - Ksh 150</label><br>
+    
+    <input type="checkbox" id="bed_sheets" name="items" value="bed sheets" data-price="40">
+    <label for="bed_sheets">bed sheets - Ksh 40</label><br>
+
+    <input type="checkbox" id="jacket" name="items" value="jacket" data-price="100">
+    <label for="jacket">jacket - Ksh 100</label><br>
+
+    <input type="checkbox" id="lab_coat/trench_coat" name="items" value="lab coat/trench coat" data-price="100">
+    <label for="lab_coat/trench_coat">lab coat/trench coat - Ksh 100</label><br>
+    
+    <button type="submit">Submit Order</button>
+            </form>   
+          </div>
+          <div class="recent-orders">
+            <h2>Recent orders</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer Name</th>
+                  <th>Phone number</th>
+                  <th>Payment</th>
+                  <th>Status</th>     
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Stacy</td>
+                  <td>0790086590</td>
+                  <td>Mpesa</td>
+                  <td>Picked up</td>
+                </tr>
+                <tr>
+                  <td>Stacy</td>
+                  <td>0790086590</td>
+                  <td>Mpesa</td>
+                  <td>Picked up</td>
+                </tr>
+                <tr>
+                  <td>Stacy</td>
+                  <td>0790086590</td>
+                  <td>Mpesa</td>
+                  <td>Picked up</td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="#">Show all</a>
+          </div>
+
+              <footer>
+                  <p>&copy; 2025 Laundry management System.All rights reserved.</p>
+              </footer>
+              <script src="script.js"></script> <!-- Link to JavaScript file -->
+              </main>
+  </body>
+</html>
