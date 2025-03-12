@@ -6,24 +6,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const customerBtn = document.getElementById("customerLogin");
     const dashboardBtn = document.getElementById("dashboardBtn");
 
-    /*employee login redirects to employee login page*/
+    /* Employee login redirects to employee login page */
     if (employeeBtn) {
         employeeBtn.addEventListener("click", function () {
             window.location.href = "login.html";
         });
     }
-    /*customer login redirects to customer login page*/
-    if(customerBtn){
+
+    /* Customer login redirects to customer login page */
+    if (customerBtn) {
         customerBtn.addEventListener("click", function () {
             window.location.href = "customer_login.html";
-        })
+        });
     }
-    //dashboard button redirects to customer's dashboard
-    if(dashboardBtn){
-        dashboardBtn.addEventListener("click", function(){
+
+    // Dashboard button redirects to customer's dashboard
+    if (dashboardBtn) {
+        dashboardBtn.addEventListener("click", function () {
             window.location.href = "customer_dashboard.html";
-        })
+        });
     }
+
     // Validate username/email format
     const usernameInput = document.getElementById("username") || document.getElementById("username-or-email");
     if (usernameInput) {
@@ -43,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (loginBtn) {
         loginBtn.addEventListener("click", function (event) {
-            event.preventDefault(); //prevents default form submission
+            event.preventDefault(); // Prevents default form submission
 
             const username = document.getElementById("username").value.trim();
             const passwordInput = document.getElementById("password");
@@ -55,22 +58,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const password = passwordInput.value.trim();
 
-            if (!isPasswordValid(passwordInput.value)) {
+            if (!isPasswordValid(password)) {
                 alert("Your password must have at least 8 characters, including uppercase, lowercase, numbers, and special characters.");
                 return;
             }
 
- // Check if the login is for an employee or customer
- if (username.includes("admin")) {
-    alert("Welcome Admin!");
-    sessionStorage.setItem("userType", "admin"); // Store session info
-    window.location.href = "admin_dashboard.html"; // Redirect to admin dashboard
-} else {
-    alert("Welcome Customer!");
-    sessionStorage.setItem("userType", "customer"); // Store session info
-    window.location.href = "customer_dashboard.html"; // Redirect to customer dashboard
-}
-});
+            // Check if the login is for an employee or customer
+            if (username.includes("admin")) {
+                alert("Welcome Admin!");
+                sessionStorage.setItem("userType", "admin"); // Store session info
+                window.location.href = "admin_dashboard.html"; // Redirect to admin dashboard
+            } else {
+                alert("Welcome Customer!");
+                sessionStorage.setItem("userType", "customer"); // Store session info
+                window.location.href = "customer_dashboard.html"; // Redirect to customer dashboard
+            }
+        });  // **← This was missing before**
+    }
+
     // Prevent non-numeric characters in phone number
     const phoneInput = document.getElementById("phone");
     if (phoneInput) {
@@ -108,9 +113,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // If validations pass, allow form submission
             alert("Order placed successfully!");
         });
-    } 
+    }
 
-    //restrict dashboard access if not loggen in
+    // Restrict dashboard access if not logged in
     if (window.location.pathname.includes("customer_dashboard.html")) {
         const userType = sessionStorage.getItem("userType");
         if (userType !== "customer") {
@@ -118,3 +123,4 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "customer_login.html"; // Redirect to login
         }
     }
+});  // **← This closes the `DOMContentLoaded` event listener properly**
