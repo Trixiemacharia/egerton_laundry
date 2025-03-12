@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Customer dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+  <link rel ="stylesheet" href="design.css">
 </head>
 <body>
   <main class="main-content">
@@ -24,6 +27,25 @@
     </div>
     </header>
     
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Laundry Cleaning</li>
+            <li>Dry Cleaning</li>
+            <li>Ironing</li>
+            <li>Pickup & Delivery</li>
+        </ul>
+    </section>
+    
+    <section id="complaints">
+        <h2>Submit a Complaint</h2>
+        <form id="complaintForm">
+            <label for="complaintText">Your Complaint:</label>
+            <textarea id="complaintText" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
     <script src="script.js"></script>
     </main>
 </body>
