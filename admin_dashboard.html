@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <header>
+            <h1>Admin Dashboard</h1>
+        </header>
+
+        <section class="dashboard-cards">
+            <div class="card">Total Sales: Ksh 25,024</div>
+            <div class="card">Orders: 3849</div>
+            <div class="card">New Customers: 120</div>
+            <div class="card">Pending Orders: 45</div>
+        </section>
+
+        <section class="recent-orders">
+            <h2>Recent Orders</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Order ID</th>
+                        <th>Status</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>clothes-laundry_basket</td>
+                        <td>45</td>
+                        <td>Pending</td>
+                        <td><button>View</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
