@@ -708,7 +708,60 @@ body.dark-mode {
 .dark-mode footer {
     background-color: #222;
 }
-/* Recent orders*/
+/*=========PAYMENT DETAILS SECTION===========*/
+.payment{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.payment h2{
+    color:#333;
+}
+
+.payment form{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.payment label{
+    font-weight: bold;
+    margin-top: 10px;
+}
+input,select{
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button{
+    background: green;
+    color:white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover{
+    background: turquoise;
+}
+#output{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+    display:none;
+}
+/*===========RECENT ORDER'S TABLE==========*/
 .recent-orders{
     margin-top:2rem;
 }

@@ -17,7 +17,7 @@
               <h2>Our Services</h2>
               <div>
                 <div class="close" id="close-btn">
-                    <span class="material-symbols-outlined">close</span>
+                  <span class="material-symbols-outlined">close</span>
                 </div>
               </div>
               <div class="sidebar">
@@ -43,6 +43,8 @@
                     </a>
                     </div>
         </aside>
+
+        <!--Main content-->
         <main class="main-content">
           <header>
               <h1>Welcome</h1>
@@ -62,14 +64,21 @@
           </div>
           </div>
           </header>
+
           <!--menu button-->
-          <div class="right">
+          <div class="left">
             <div class="top">
               <button id="menu-btn">
                 <span class="material-symbols-outlined">menu</span>
               </button>
             </div>
           </div>
+          <!--smooth sidebar transitions-->
+          <section id="home" class="content-section visible">
+            <h2>Home</h2>
+            <p>Welcome to our laundry service dashboard.</p>
+        </section>
+
           <div class="Services">
             <form action="saverecord" method="post">
               <label for="customer-name">Customer Name:</label>
@@ -122,14 +131,43 @@
     <button type="submit">Submit Order</button>
             </form>   
           </div>
+          <!--Payment-->
+          <div class="payment">
+            <h2>Enter Payment Details: </h2>
+            <form id="paymentForm">
+              <label for="phone_number">Phone Number: </label>
+              <input type="text" id="phone_number" required>
+              <label for="order_id">Order ID: </label>
+              <input type="number" id="order_id" required>
+              <label for="payment_mode">Payment Mode: </label>
+              <select id="payment_mode" required>
+                <option value="Cash">Cash</option>
+                <option value="Mpesa">Mpesa</option>
+                <option value="Credit">Credit/Debit</option>
+              </select>
+              <label for="payment_status">Payment Status: </label>
+              <select id="payment_status" required>
+                <option value="Paid">Paid</option>
+                <option value="Not Paid">Not Paid</option>
+              </select>
+              
+              <!--Transaction id to be placed-->
+              <label for="transaction_id">Transaction ID</label>
+              <input type="text" id="transaction_id">
+              <button type="button" onclick="submitPayment()">Submit Payment</button>
+            </form>
+            <div id="output"></div>
+          </div>
+
+          <!--order's table for viewing orders-->
           <div class="recent-orders">
-            <h2>Recent orders</h2>
+            <h3>Recent orders</h3>
             <table>
               <thead>
                 <tr>
                   <th>Customer Name</th>
                   <th>Phone number</th>
-                  <th>Payment</th>
+                  <th>Payment Mode</th>
                   <th>Status</th>     
                 </tr>
               </thead>
