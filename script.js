@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const orderBtn = document.querySelector(".order form button");
     const employeeBtn = document.getElementById("empLogin");
     const customerBtn = document.getElementById("customerLogin");
+    const adminBtn = document.getElementById("adminLogin");
     const dashboardBtn = document.getElementById("dashboardBtn");
 
     /* Employee login redirects to employee login page */
@@ -17,6 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (customerBtn) {
         customerBtn.addEventListener("click", function () {
             window.location.href = "customer_login.html";
+        });
+    }
+
+    /*Admin login redirects to admin login page*/
+    if (adminBtn) {
+        adminBtn.addEventListener("click", function () {
+            window.location.href = "admin_login.html";
         });
     }
 
