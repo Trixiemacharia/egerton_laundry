@@ -3,10 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const employeeBtn = document.getElementById("empLogin");
     const customerBtn = document.getElementById("customerLogin");
     const adminBtn = document.getElementById("adminLogin");
-<<<<<<< HEAD
     const dashboardBtn = document.getElementById("dashboardBtn");
-=======
->>>>>>> f3977b42f30a64d19dc1827f71414609a5cb7929
 
     const loginForm = document.getElementById("loginForm");
     const employeeLoginForm = document.getElementById("employeeLoginForm");
@@ -26,23 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-<<<<<<< HEAD
-    /*Admin login redirects to admin login page*/
     if (adminBtn) {
         adminBtn.addEventListener("click", function () {
             window.location.href = "admin_login.html";
-        });
-    }
-
-    // Dashboard button redirects to customer's dashboard
-    if (dashboardBtn) {
-        dashboardBtn.addEventListener("click", function () {
-            window.location.href = "customer_dashboard.html";
-=======
-    if (adminBtn) {
-        adminBtn.addEventListener("click", function () {
-            window.location.href = "admin_login.html";
->>>>>>> f3977b42f30a64d19dc1827f71414609a5cb7929
         });
     }
 
