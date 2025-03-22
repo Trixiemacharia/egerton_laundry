@@ -9,7 +9,9 @@
 
 body {
     display: flex;
-    flex-direction: column; /* Prevents shrinking */
+    justify-content: center;
+    align-items: center;
+    margin: 0;
     align-items: stretch;  /* Ensures full width */
     min-height: 100vh;
 }

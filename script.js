@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const adminLoginForm = document.getElementById("adminLoginForm");
     const customerLoginForm = document.getElementById("customerLoginForm");
     const loginButtons = document.querySelectorAll(".loginButton");
+    const passwordToggleIcon = document.getElementById("togglePassword");
 
     // Redirect index page buttons to login pages
     if (employeeBtn) {
@@ -26,6 +27,26 @@ document.addEventListener("DOMContentLoaded", function () {
         adminBtn.addEventListener("click", function () {
             window.location.href = "admin_login.html";
         });
+    }
+
+    function togglePassword() {
+        let password = document.getElementById("password");
+        let icon = document.getElementById("togglePassword");
+
+        if (password.type === "password") {
+            password.type = "text";
+            icon.classList.remove("bxs-lock-alt");  // Locked icon
+            icon.classList.add("bxs-lock-open-alt"); // Unlocked icon
+        } else {
+            password.type = "password";
+            icon.classList.remove("bxs-lock-open-alt");
+            icon.classList.add("bxs-lock-alt");
+        }
+    }
+
+
+    if (passwordToggleIcon) {
+        passwordToggleIcon.addEventListener("click", togglePassword);
     }
 
     // Password validation
@@ -107,6 +128,5 @@ document.addEventListener("DOMContentLoaded", function () {
             container.classList.add("hide");
         });
     }
-    
 
 });
