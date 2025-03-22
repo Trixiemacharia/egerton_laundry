@@ -360,6 +360,7 @@ footer {
     aside{
         height:100vh;
         background:gray;
+
     }
     /*sidebar*/
     aside .sidebar {
@@ -599,6 +600,8 @@ footer {
     color: white;
     text-align: center;
     width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 /* Welcome Screen */
@@ -977,4 +980,20 @@ content .insights > div:hover {
     .dashboard-cards {
         flex-direction: column;
     }
+}
+.container {
+    display: none; /* Hide the container by default */
+}
+
+.show {
+    display: block; /* Show container when the class is added */
+}
+
+#menu {
+    cursor: pointer;
+    font-size: 24px; /* Make the icon larger for easier clicking */
+    margin-bottom: 550px;
+}
+.hide{
+    display:none;
 }
