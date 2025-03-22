@@ -8,12 +8,10 @@
 }
 
 body {
-    
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: teal;
+    flex-direction: column; /* Prevents shrinking */
+    align-items: stretch;  /* Ensures full width */
+    min-height: 100vh;
 }
 
 
@@ -174,12 +172,13 @@ button:hover {
     background-color: #0056b3;
 }
 
-footer {
+/*footer {
     margin-top: 20px;
     padding: 10px;
     background-color:paleturquoise;
     color: white;
-}
+}*/
+
 /* Welcome screen: full page and visible by default */
 #welcome-screen {
     position: fixed;
@@ -624,7 +623,7 @@ footer {
 
 /* Main Content Hidden Initially */
 #main-content {
-    display: none;
+    display: block;
     text-align: center;
     padding-top: 50px;
 }
@@ -885,7 +884,7 @@ body {
 
 .content .date{
     display:inline-block;
-    background: white;
+    background: black ;
     border-radius: 1rem;
     margin-top: 1rem;
     padding: 0.5rem 1.6rem;
