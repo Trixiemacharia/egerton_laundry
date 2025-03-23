@@ -113,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    //sidebar menu toggle
     const menuButton = document.getElementById("menu");
     const closeButton = document.getElementById("close-btn");
     const container = document.querySelector(".container");

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
   <link rel ="stylesheet" href="design.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 <body>
   <main class="main-content">
@@ -37,11 +39,20 @@
         </ul>
     </section>
     
-    <section id="complaints">
-        <h2>Submit a Complaint</h2>
-        <form id="complaintForm">
-            <label for="complaintText">Your Complaint:</label>
-            <textarea id="complaintText" required></textarea>
+    <section id="feedback">
+        <h2>Submit a Feedback</h2>
+        <form id="feedbackForm">
+            <label for="feedbackText">Your Feedback:</label>
+            <textarea id="feedbackText" required></textarea>
+
+            <label>Rate our services:</label>
+            <div class="ratings">
+              <i class="fa-solid fa-star"></i></label>
+              <i class="fa-solid fa-star"></i></label>
+              <i class="fa-solid fa-star"></i></label>
+              <i class="fa-solid fa-star"></i></label>
+              <i class="fa-solid fa-star"></i></label>
+            </div>
             <button type="submit">Submit</button>
         </form>
     </section>
@@ -49,3 +60,4 @@
     <script src="script.js"></script>
     </main>
 </body>
+</html>
