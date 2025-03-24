@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     // Select login and navigation buttons
     const employeeBtn = document.getElementById("empLogin");
     const customerBtn = document.getElementById("customerLogin");
