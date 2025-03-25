@@ -20,23 +20,19 @@
               <h2>Our Services</h2>
               </div>
               <div class="sidebar">
-                      <a href="#">
+                      <a href="emp_dashboard.html">
                       <span class="material-symbols-outlined">home</span>
                       <h3>Home</h3>
                     </a>
-                    <a href="#">
+                    <a href="settings.html">
                       <span class="material-symbols-outlined">settings</span>
                       <h3>Settings</h3>
                     </a>
-                    <a href="#">
+                    <a href="laundry.html">
                       <span class="material-symbols-outlined">laundry</span>
                       <h3>Laundry</h3>
                     </a>
-                    <a href="#">
-                      <span class="material-symbols-outlined">share_reviews</span>
-                      <h3>Share_reviews</h3>
-                    </a>
-                    <a href="#">
+                    <a href="index.html">
                       <span class="material-symbols-outlined">logout</span>
                       <h3>Logout</h3>
                     </a>
@@ -97,71 +93,6 @@
                 <option value="iron">Iron</option>
                 <option value="dryclean">Dry Cleaning</option>
             </select>
-
-              <label>Choose the item of clothing:</label>
-    <input type="checkbox" id="duvet(5*6)" name="items" value="duvet(5*6)" data-price="250">
-    <label for="duvet(5*6)">duvet(5*6) - Ksh 250</label><br>
-
-    <input type="checkbox" id="duvet(6*6)" name="items" value="duvet(6*6)" data-price="250">
-    <label for="duvet(6*6)">duvet(6*6) - Ksh 250</label><br>
-
-    <input type="checkbox" id="duvet(4*6)" name="items" value="duvet(4*6)" data-price="200">
-    <label for="duvet(4*6)">Jeans - Ksh 200</label><br>
-    
-    <input type="checkbox" id="assorted_clothes(bucket)" name="items" value="assorted clothes(bucket)" data-price="250">
-    <label for="assorted_clothes(bucket)">assorted clothes(bucket) - Ksh 250</label><br>
-
-    <input type="checkbox" id="clothes-laundry_basket" name="items" value="clothes-laundry basket" data-price="350">
-    <label for="clothes-laundry_basket">clothes-laundry basket - Ksh 350</label><br>
-
-    <input type="checkbox" id="sport_shoes/rubbers" name="items" value="sport shoes/rubbers" data-price="100">
-    <label for="sport_shoes/rubbers">sport shoes/rubbers - Ksh 100</label><br>
-
-    <input type="checkbox" id="pillow" name="items" value="pillow" data-price="100">
-    <label for="pillow">pillow - Ksh 100</label><br>
-
-    <input type="checkbox" id="bed_cover" name="items" value="bed cover" data-price="150">
-    <label for="bed_cover">bed cover - Ksh 150</label><br>
-    
-    <input type="checkbox" id="bed_sheets" name="items" value="bed sheets" data-price="40">
-    <label for="bed_sheets">bed sheets - Ksh 40</label><br>
-
-    <input type="checkbox" id="jacket" name="items" value="jacket" data-price="100">
-    <label for="jacket">jacket - Ksh 100</label><br>
-
-    <input type="checkbox" id="lab_coat/trench_coat" name="items" value="lab coat/trench coat" data-price="100">
-    <label for="lab_coat/trench_coat">lab coat/trench coat - Ksh 100</label><br>
-    
-    <button type="submit">Submit Order</button>
-            </form>   
-          </div>
-          <!--Payment-->
-          <div class="payment">
-            <h2>Enter Payment Details: </h2>
-            <form id="paymentForm">
-              <label for="phone_number">Phone Number: </label>
-              <input type="text" id="phone_number" required>
-              <label for="order_id">Order ID: </label>
-              <input type="number" id="order_id" required>
-              <label for="payment_mode">Payment Mode: </label>
-              <select id="payment_mode" required>
-                <option value="Cash">Cash</option>
-                <option value="Mpesa">Mpesa</option>
-                <option value="Credit">Credit/Debit</option>
-              </select>
-              <label for="payment_status">Payment Status: </label>
-              <select id="payment_status" required>
-                <option value="Paid">Paid</option>
-                <option value="Not Paid">Not Paid</option>
-              </select>
-              
-              <!--Transaction id to be placed-->
-              <label for="transaction_id">Transaction ID</label>
-              <input type="text" id="transaction_id">
-              <button type="button" onclick="submitPayment()">Submit Payment</button>
-            </form>
-            <div id="output"></div>
-          </div>
 
           <!--order's table for viewing orders-->
           <div class="recent-orders">

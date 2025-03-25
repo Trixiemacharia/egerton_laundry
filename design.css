@@ -245,7 +245,7 @@ body.dark-mode {
 /* Sidebar */
 .sidebar {
     width: 250px;
-    background-color: #333;
+    background-color: green;
     color: white;
     padding: 20px;
     display: flex;
@@ -274,7 +274,7 @@ body.dark-mode {
 }
 
 .sidebar nav ul li a:hover {
-    background-color: #555;
+    background-color: green;
 }
 
 /* Main Content */
@@ -479,13 +479,13 @@ footer {
     gap: 10px; /*gap btwn icon &text*/
     padding:10px;
     text-decoration: none;
-    color: black;
+    color: green;
     font-size: 18px;
 }
 
 .material-symbols-outlined{
     font-size: 24px; /*icon size*/
-    color: black;
+    color:blue;
 }
 /*============Main Content============*/
 .main-content {

@@ -130,5 +130,37 @@ document.addEventListener("DOMContentLoaded", function () {
             container.classList.add("hide");
         });
     }
+    //dynamic content loading for the sidebar links
+    const links = document.querySelectorAll(". sidebar a");
+    const contentDiv = document.getElementById("content");
+
+    
+    links.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent full-page reload
+
+            const page = this.getAttribute("href"); // Get page URL
+
+            fetch(page)
+                .then(response => response.text())
+                .then(data => {
+                    contentDiv.innerHTML = data; // Load new content into the div
+                    history.pushState(null, "", page); // Update browser URL (optional)
+                })
+                .catch(error => console.error("Error loading page:", error));
+        });
+    });
+
+    // Handle browser back/forward button navigation
+    window.addEventListener("popstate", function () {
+        const currentPage = window.location.pathname.split("/").pop();
+        if (currentPage) {
+            fetch(currentPage)
+                .then(response => response.text())
+                .then(data => {
+                    contentDiv.innerHTML = data;
+                });
+        }
+    });
 
 });
