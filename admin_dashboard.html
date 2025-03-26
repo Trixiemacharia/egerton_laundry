@@ -4,25 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="admin.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
 <body>
 
     <!-- Sidebar -->
+    <div class="container">
     <aside class="sidebar">
         <h2>Dashboard</h2>
         <ul>
             <li><a href="admin_dashboard.html">
                 <span class="material-symbols-outlined">dashboard</span>
                 <h3>Dashboard</h3></a></li>
-            <li><a href="#">
-                <span class="material-symbols-outlined">person</span>
-                <h3>Customers</h3></a></li>
-            <li><a href="#">
+            <li><a href="analytics">
                 <span class="material-symbols-outlined">analytics</span>
                 <h3>Analytics</h3></a></li>
-            <li><a href="#">
+            <li><a href="customer_dashboard.html">
                 <span class="material-symbols-outlined">reviews</span>
                 <h3>Reviews</h3></a></li>
             <li><a href="settings.html">
@@ -43,26 +41,16 @@
         <div class="date">
             <input type="date">
         </div>
+
+        <!--menu button-->
+        <div class="left">
+            <button id="menu-btn">
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+
 <!--sales section-->
         <div class="insights">
-            <div class="sales">
-                    <span class="material-symbols-outlined">analytics</span>
-                    <div class="middle">
-                        <div class="left">
-                        <h3>Total Sales</h3>
-                        <h1>Ksh 25,908</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>81%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24hrs</small>
-                </div>
                 <!--orders-->
                 <div class="orders">
                     <span class="material-symbols-outlined">orders</span>
@@ -162,6 +150,8 @@
             </table>
         </section>
     </main>
+    </div>
 
+    <script src="admin.js"></script>
 </body>
 </html>
