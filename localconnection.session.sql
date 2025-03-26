@@ -1,0 +1,1 @@
+insert INTO admin VALUES("admin","Admin..1");
