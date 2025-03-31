@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Management - Reviews</title>
+    <link rel="stylesheet" href="reviews.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <div class="sidebar">
+            <ul class="nav-links">
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="analytics.html"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                <li class="active"><a href="reviews.html"><i class="fas fa-star"></i> Reviews</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+        
+        <div class="main-content">
+            <header>
+                <h1>Customer Reviews</h1>
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Admin">
+                    <span>Admin</span>
+                </div>
+            </header>
+            
+            <div class="reviews-summary">
+                <div class="overall-rating">
+                    <div class="rating-number">4.7</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="total-reviews">Based on 128 reviews</div>
+                </div>
+                
+                <div class="rating-bars">
+                    <div class="rating-bar">
+                        <div class="rating-label">5 stars</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 75%;"></div>
+                        </div>
+                        <div class="rating-count">96</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-label">4 stars</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 15%;"></div>
+                        </div>
+                        <div class="rating-count">19</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-label">3 stars</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 5%;"></div>
+                        </div>
+                        <div class="rating-count">6</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-label">2 stars</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 3%;"></div>
+                        </div>
+                        <div class="rating-count">4</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-label">1 star</div>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 2%;"></div>
+                        </div>
+                        <div class="rating-count">3</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reviews-filter">
+                <div class="filter-group">
+                    <label>Sort by:</label>
+                    <select>
+                        <option>Newest First</option>
+                        <option>Oldest First</option>
+                        <option>Highest Rated</option>
+                        <option>Lowest Rated</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Filter by rating:</label>
+                    <select>
+                        <option>All Ratings</option>
+                        <option>5 Stars</option>
+                        <option>4 Stars</option>
+                        <option>3 Stars</option>
+                        <option>2 Stars</option>
+                        <option>1 Star</option>
+                    </select>
+                </div>
+                <button class="export-btn">Export Reviews</button>
+            </div>
+            
+            <div class="reviews-list">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="customer-info">
+                            <img src="https://via.placeholder.com/50" alt="Customer">
+                            <div>
+                                <h3>Sarah Johnson</h3>
+                                <div class="review-date">March 15, 2023</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <h4>Excellent service!</h4>
+                        <p>My clothes came back perfectly clean and neatly folded. The pickup and delivery was right on time. Will definitely use this service again!</p>
+                    </div>
+                    <div class="review-actions">
+                        <button class="reply-btn">Reply</button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="customer-info">
+                            <img src="https://via.placeholder.com/50" alt="Customer">
+                            <div>
+                                <h3>Michael Brown</h3>
+                                <div class="review-date">March 10, 2023</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <h4>Great but one issue</h4>
+                        <p>Overall very good service, but one of my shirts had a small stain that wasn't completely removed. Everything else was perfect though.</p>
+                    </div>
+                    <div class="review-response">
+                        <strong>Your response:</strong>
+                        <p>Thank you for your feedback, Michael. We're sorry to hear about the stain and would like to offer you a discount on your next order as compensation.</p>
+                    </div>
+                    <div class="review-actions">
+                        <button class="reply-btn">Edit Reply</button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="customer-info">
+                            <img src="https://via.placeholder.com/50" alt="Customer">
+                            <div>
+                                <h3>Emily Davis</h3>
+                                <div class="review-date">March 5, 2023</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <h4>Late delivery</h4>
+                        <p>The laundry was done well but it was delivered 2 hours later than promised. I had plans that evening and needed my clothes on time.</p>
+                    </div>
+                    <div class="review-actions">
+                        <button class="reply-btn">Reply</button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="customer-info">
+                            <img src="https://via.placeholder.com/50" alt="Customer">
+                            <div>
+                                <h3>David Wilson</h3>
+                                <div class="review-date">March 1, 2023</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <h4>Perfect every time</h4>
+                        <p>I've been using this laundry service for 6 months now and they never disappoint. My clothes always come back looking brand new.</p>
+                    </div>
+                    <div class="review-actions">
+                        <button class="reply-btn">Reply</button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <button class="prev-btn" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                <div class="page-numbers">
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                </div>
+                <button class="next-btn">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
