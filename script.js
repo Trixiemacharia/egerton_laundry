@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
             container.classList.add("hide");
         });
     }
-    //dynamic content loading for the sidebar links
+    /*dynamic content loading for the sidebar links
     const links = document.querySelectorAll(". sidebar a");
     const contentDiv = document.getElementById("content");
 
@@ -161,6 +161,55 @@ document.addEventListener("DOMContentLoaded", function () {
                     contentDiv.innerHTML = data;
                 });
         }
+    });*/
+    const laundryLink = document.querySelector('a[href="laundry.html"]');
+    const servicesSection = document.getElementById('servicesSection');
+    const closeService = document.getElementById('closeService');
+    const overlay = document.getElementById('overlay');
+    
+    // Prevent default navigation for laundry link
+    laundryLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        servicesSection.style.display = 'block';
+        overlay.style.display = 'block';
+    });
+    
+    // Close service section when X is clicked
+    closeService.addEventListener('click', function() {
+        servicesSection.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+    
+    // Close service section when overlay is clicked
+    overlay.addEventListener('click', function() {
+        servicesSection.style.display = 'none';
+        overlay.style.display = 'none';
     });
 
+    const settingsPage = document.querySelector(".settings-page");
+    const closeSettings = document.getElementById("closeSettings");
+    const settingsLink = document.querySelector('a[href="settings.html"]')
+     // Prevent default navigation for laundry link
+     if (settingsPage) {
+        settingsPage.style.display = 'none';
+        console.log("Initial settings display:", settingsPage.style.display);
+    }
+    
+    if (settingsLink && settingsPage && closeSettings) {
+        settingsLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            settingsPage.style.display = 'block';
+            overlay.style.display = 'block';
+        });
+        
+        closeSettings.addEventListener('click', function() {
+            settingsPage.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+        
+        overlay.addEventListener('click', function() {
+            settingsPage.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+    }
 });
