@@ -4,152 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="admin.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="stylesheet" href="admin_dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
-    <!-- Sidebar -->
-    <div class="container">
-    <aside class="sidebar">
-        <h2>Dashboard</h2>
-        <ul>
-            <li><a href="admin_dashboard.html">
-                <span class="material-symbols-outlined">dashboard</span>
-                <h3>Dashboard</h3></a></li>
-            <li><a href="analytics">
-                <span class="material-symbols-outlined">analytics</span>
-                <h3>Analytics</h3></a></li>
-            <li><a href="customer_dashboard.html">
-                <span class="material-symbols-outlined">reviews</span>
-                <h3>Reviews</h3></a></li>
-            <li><a href="settings.html">
-                <span class="material-symbols-outlined">settings</span>
-                <h3>Settings</h3></a></li>
-            <li><a href="index.html">
-                <span class="material-symbols-outlined">logout</span>
-                <h3>Logout</h3></a></li>
-        </ul>
-    </aside>
-
-    <!-- Main section-->
-    <main class="content">
-        <header>
-            <h1>Admin Dashboard</h1>
-        </header>
-
-        <div class="date">
-            <input type="date">
+    <div class="admin-container">
+        <div class="sidebar">
+            <ul class="nav-links">
+                <li class="active"><a href="admin_dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="reviews.html"><i class="fas fa-star"></i> Reviews</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i>Settings</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
         </div>
 
-        <!--menu button-->
-        <div class="left">
-            <button id="menu-btn">
-              <span class="material-symbols-outlined">menu</span>
-            </button>
-        </div>
+        <main class="main-content">
+            <header class="header">
+                <h1>Dashboard</h1>
+                <div class="user-info">
+                    <span>Admin</span>
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </header>
 
-<!--sales section-->
-        <div class="insights">
-                <!--orders-->
-                <div class="orders">
-                    <span class="material-symbols-outlined">orders</span>
-                    <div class="middle">
-                        <div class="left">
-                        <h3>Orders</h3>
-                        <h1>120</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>60%</p>
-                            </div>
-                        </div>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>Today's Orders</h3>
+                        <p class="stat-value">24</p>
                     </div>
-                    <small class="text-muted">Last 24hrs</small>
-                </div>
-                <!--Total income-->
-                <div class="total_income">
-                    <span class="material-symbols-outlined">stacked_line_chart</span>
-                    <div class="middle">
-                        <div class="left">
-                        <h3>Total Income</h3>
-                        <h1>Ksh 30,000</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p> 44%</p>
-                            </div>
-                        </div>
+                    <div class="stat-icon">
+                        <i class="fas fa-laundry-basket"></i>
                     </div>
-                    <small class="text-muted">Last 24hrs</small>
                 </div>
-                <!--total expenses-->
-                <div class="total_expenses">
-                    <span class="material-symbols-outlined">bar_chart</span>
-                    <div class="middle">
-                        <div class="left">
-                        <h3>Total Expenses</h3>
-                        <h1>Ksh 10,800</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>62%</p>
-                            </div>
-                        </div>
+
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>Completed</h3>
+                        <p class="stat-value">18</p>
                     </div>
-                    <small class="text-muted">Last 24hrs</small>
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
                 </div>
-                <!--New customers-->
-                <div class="customer">
-                    <span class="material-symbols-outlined">person</span>
-                    <div class="middle">
-                        <div class="left">
+
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>In Progress</h3>
+                        <p class="stat-value">4</p>
+                    </div>
+                    <div class="stat-icon">
+                        <i class="fas fa-spinner"></i>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>Pending</h3>
+                        <p class="stat-value">2</p>
+                    </div>
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-info">
                         <h3>New Customers</h3>
-                        <h1>30</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>20%</p>
-                            </div>
-                        </div>
+                        <p class="stat-value">5</p>
                     </div>
-                    <small class="text-muted">Last 24hrs</small>
+                    <div class="stat-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
                 </div>
 
-        <section class="recent-orders">
-            <h2>Recent Orders</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Order ID</th>
-                        <th>Status</th>
-                        <th>Details</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>clothes-laundry_basket</td>
-                        <td>45</td>
-                        <td>Pending</td>
-                        <td><button>View</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>Expenses</h3>
+                        <p class="stat-value">Ksh1,245</p>
+                    </div>
+                    <div class="stat-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="incomeChart"></canvas>
+            </div>
+
+            <div class="recent-orders">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ordersTableBody">
+                        <!-- Orders will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
     </div>
 
     <script src="admin.js"></script>
